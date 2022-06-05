@@ -11,17 +11,11 @@ contract StorageFactory {
         simpleStorages.push(new SimpleStorage());
     }
 
-    function storageFactoryStore(uint256 _storageIndex, uint256 _storageNumber)
-        public
-    {
+    function storageFactoryStore(uint256 _storageIndex, uint256 _storageNumber) public {
         simpleStorages[_storageIndex].store(_storageNumber);
     }
 
-    function storageFactoryGet(uint256 _storageIndex)
-        public
-        view
-        returns (uint256)
-    {
+    function storageFactoryGet(uint256 _storageIndex) public view returns (uint256) {
         return simpleStorages[_storageIndex].retreive();
     }
 }
